@@ -1,0 +1,13 @@
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\bin\Debug\netcoreapp2.1\TasksDemo.deps.json
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\bin\Debug\netcoreapp2.1\TasksDemo.runtimeconfig.json
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\bin\Debug\netcoreapp2.1\TasksDemo.runtimeconfig.dev.json
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\bin\Debug\netcoreapp2.1\TasksDemo.dll
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\bin\Debug\netcoreapp2.1\TasksDemo.pdb
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.csproj.AssemblyReference.cache
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.AssemblyInfoInputs.cache
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.AssemblyInfo.cs
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.csproj.CoreCompileInputs.cache
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.dll
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.pdb
+D:\Estudos\csharp\UdemyParallelProgramming\TasksDemo\obj\Debug\netcoreapp2.1\TasksDemo.genruntimeconfig.cache
