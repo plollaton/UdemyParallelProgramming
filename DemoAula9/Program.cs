@@ -17,12 +17,12 @@ namespace DemoAula9
 
         public void Deposit(int amount)
         {
-            Interlocked.Add(ref _balance, amount);
+            Balance += amount;
         }
 
         public void Withdraw(int amount)
         {
-            Interlocked.Add(ref _balance, -amount);
+            Balance -= amount;
         }
     }
     
@@ -32,6 +32,8 @@ namespace DemoAula9
         {
             var ba = new BankAccount();
             var tasks = new List<Task>();
+
+            var sl = new SpinLock();
             
             for (int i = 0; i < 10; i++)
             {
@@ -39,7 +41,16 @@ namespace DemoAula9
                 {
                     for (int j = 0; j < 1000; j++)
                     {
-                        ba.Deposit(100);
+                        var lockTaken = false;
+                        try
+                        {
+                            sl.Enter(ref lockTaken);
+                            ba.Deposit(100);
+                        }
+                        finally
+                        {
+                            if (lockTaken) sl.Exit();
+                        }
                     }
                 }));
 
@@ -47,7 +58,16 @@ namespace DemoAula9
                 {
                     for (int j = 0; j < 1000; j++)
                     {
-                        ba.Withdraw(100);
+                        var lockTaken = false;
+                        try
+                        {
+                            sl.Enter(ref lockTaken);
+                            ba.Withdraw(100);
+                        }
+                        finally
+                        {
+                            if (lockTaken) sl.Exit();
+                        }
                     }
                 }));
             }
