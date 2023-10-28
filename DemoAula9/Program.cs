@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DemoAula9
 {
     public class BankAccount
     {
-        public object padlock = new object();
-        public int Balance { get; private set; }
+        private int _balance;
+
+        public int Balance
+        {
+            get => _balance;
+            private set => _balance = value;
+        }
 
         public void Deposit(int amount)
         {
-            lock (padlock)
-            {
-                Balance += amount;
-            }
+            Interlocked.Add(ref _balance, amount);
         }
 
         public void Withdraw(int amount)
         {
-            lock (padlock)
-            {
-                Balance -= amount;
-            }
+            Interlocked.Add(ref _balance, -amount);
         }
     }
     
